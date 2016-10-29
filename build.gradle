@@ -1,0 +1,35 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+	apply plugin: 'maven'
+	
+    version = '1.1'
+	group = "com.secl.nidvsa"
+	sourceCompatibility = 1.7
+	targetCompatibility = 1.7
+
+	ext{
+		guavaVersion='14.0.1'
+		junitVersion='4.8.2'
+	}
+	
+    repositories {
+	    mavenLocal()
+        mavenCentral()
+	    maven {
+	    	url 'http://files.couchbase.com/maven2'
+	    }
+		maven {
+			url 'file://' + new File(System.getProperty('user.home'), '.m2/repository').absolutePath
+		}
+    }
+
+    dependencies {
+		compile "com.google.guava:guava:${project.ext.guavaVersion}"
+        testCompile "junit:junit:${project.ext.junitVersion}"		
+    }
+
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+}
