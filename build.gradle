@@ -3,8 +3,8 @@ subprojects {
     apply plugin: 'eclipse'
 	apply plugin: 'maven'
 	
-    version = '1.1'
-	group = "com.secl.nidvsa"
+    version = '1.0'
+	group = "com.bitsoft.router"
 	sourceCompatibility = 1.7
 	targetCompatibility = 1.7
 
