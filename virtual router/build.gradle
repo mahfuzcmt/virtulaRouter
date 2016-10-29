@@ -4,7 +4,7 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 
 
-mainClassName = 'com.bitsoft.virtualrouter.app'
+mainClassName = 'com.bitsoft.router.app.App'
 
 
 dependencies {
